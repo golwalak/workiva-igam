@@ -365,7 +365,10 @@ The `python/` directory contains Python scripts for Workiva Identity, Governance
 ```
 python/
 ├── W_IGAM_Request_new.py      # Main IGAM reporting script
-├── config.ini.template        # Configuration template
+├── config.example.ini         # Configuration example template
+├── config.ini.template        # Configuration template  
+├── requirements.txt           # Python dependencies
+├── requirements-azure.txt     # Azure-specific dependencies
 ├── README.md                  # Python scripts documentation
 ├── utils/                     # Utility modules
 │   ├── visualize_roles.py     # Advanced role visualization
@@ -375,6 +378,12 @@ python/
 └── tests/                     # Test files
     └── test_workiva_igam_integration.py  # Integration tests
 ```
+
+### Configuration Templates
+
+The `config/` directory contains configuration templates:
+- **MCP Server configs**: Templates for Claude Desktop and other MCP clients
+- **Python configs**: Example configuration files for IGAM scripts
 
 ### Configuration Requirements
 

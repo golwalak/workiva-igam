@@ -1,0 +1,17 @@
+# Azure Requirements for Workiva IGAM Reporting Tool
+# Add these to the existing requirements.txt for Azure deployment
+
+# Original requirements
+requests>=2.25.0
+urllib3>=1.26.0
+configparser>=5.0.0
+
+# Azure SDK dependencies
+azure-identity>=1.12.0
+azure-keyvault-secrets>=4.7.0
+azure-storage-blob>=12.14.0
+azure-storage-file-share>=12.11.0
+azure-core>=1.26.0
+
+# Optional dependency for memory usage tracking
+# psutil>=5.8.0

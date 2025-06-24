@@ -26,6 +26,15 @@ python W_IGAM_Request_new.py
 - configparser
 - A valid `config.ini` file with API credentials
 
+**Installation:**
+```bash
+# Install basic requirements
+pip install -r requirements.txt
+
+# For Azure deployment, use:
+pip install -r requirements-azure.txt
+```
+
 ## Utils Directory
 
 ### visualize_roles.py
@@ -47,7 +56,13 @@ Integration tests for the IGAM reporting system, including API connectivity and 
 
 ## Configuration
 
-The scripts require a `config.ini` file with the following structure:
+The scripts require a `config.ini` file with the following structure. You can use `config.example.ini` as a starting template:
+
+```bash
+# Copy the example configuration
+cp config.example.ini config.ini
+# Edit config.ini with your actual values
+```
 
 ```ini
 [api]

@@ -1,0 +1,5 @@
+requests>=2.25.0
+urllib3>=1.26.0
+configparser>=5.0.0
+# Optional dependency for memory usage tracking
+# psutil>=5.8.0
