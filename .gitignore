@@ -15,6 +15,25 @@ dist/
 .env.test.local
 .env.production.local
 
+# Python configuration files with credentials
+python/config.ini
+
+# Python cache and virtual environment
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+ENV/
+env/
+
+# Output files and logs
+*.csv
+*.log
+logs/
+output/
+
 # IDE files
 .vscode/settings.json
 .vscode/launch.json
