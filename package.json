@@ -1,0 +1,36 @@
+{
+  "name": "github-mcp-server",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "github-mcp-server": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "dev": "tsc && node build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mcp",
+    "github",
+    "model-context-protocol"
+  ],
+  "author": "SCE IAM Team",
+  "license": "ISC",
+  "description": "Model Context Protocol server for GitHub integration",
+  "files": [
+    "build"
+  ],
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.13.1",
+    "@octokit/rest": "^22.0.0",
+    "@types/node": "^24.0.4",
+    "dotenv": "^16.5.0",
+    "zod": "^3.25.67"
+  }
+}

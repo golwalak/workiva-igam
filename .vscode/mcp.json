@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "github-mcp-server": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["build/index.js"],
+      "env": {
+        "GITHUB_TOKEN": "your_github_token_here"
+      }
+    }
+  }
+}
