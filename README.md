@@ -1,4 +1,18 @@
-# GitHub MCP Server
+# Workiva IGAM Development Workspace
+
+This workspace contains both a **GitHub MCP Server** for GitHub integration and **Python scripts** for Workiva Identity, Governance, and Access Management (IGAM) reporting.
+
+## Projects
+
+### 1. GitHub MCP Server (TypeScript)
+A Model Context Protocol (MCP) server that provides comprehensive GitHub integration capabilities. This server allows AI assistants and other MCP clients to interact with GitHub repositories, issues, pull requests, and more through a standardized interface.
+
+### 2. Workiva IGAM Python Scripts
+Python scripts for retrieving, processing, and reporting on Workiva user account data for compliance and analysis purposes.
+
+---
+
+## GitHub MCP Server
 
 A Model Context Protocol (MCP) server that provides comprehensive GitHub integration capabilities. This server allows AI assistants and other MCP clients to interact with GitHub repositories, issues, pull requests, and more through a standardized interface.
 
@@ -310,10 +324,68 @@ npm run start
 
 ISC License
 
-## Support
+---
 
-For issues and questions:
-1. Check the GitHub API documentation: https://docs.github.com/en/rest
-2. Review the MCP specification: https://modelcontextprotocol.io/
-3. Ensure your GitHub token has the necessary permissions
-4. Verify your network connection and GitHub API access
+## Workiva IGAM Python Scripts
+
+The `python/` directory contains Python scripts for Workiva Identity, Governance, and Access Management (IGAM) reporting.
+
+### Key Features
+- **OAuth 2.0 Authentication**: Secure API access using client credentials flow
+- **User Data Processing**: Retrieve and filter Workiva user account information
+- **CSV Report Generation**: Standardized reports for compliance and analysis
+- **Email Notifications**: Automated report delivery with attachments
+- **Data Visualization**: Role distribution charts and analytics
+- **Comprehensive Logging**: Detailed execution logs for troubleshooting
+
+### Quick Start
+
+1. **Navigate to the Python directory:**
+   ```bash
+   cd python/
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   pip install requests configparser
+   ```
+
+3. **Configure the application:**
+   ```bash
+   cp config.ini.template config.ini
+   # Edit config.ini with your Workiva API credentials
+   ```
+
+4. **Run the main script:**
+   ```bash
+   python W_IGAM_Request_new.py
+   ```
+
+### Directory Structure
+```
+python/
+├── W_IGAM_Request_new.py      # Main IGAM reporting script
+├── config.ini.template        # Configuration template
+├── README.md                  # Python scripts documentation
+├── utils/                     # Utility modules
+│   ├── visualize_roles.py     # Advanced role visualization
+│   ├── simple_visualize_roles.py  # Simple visualization
+│   ├── data_validator.py      # Data validation utilities
+│   └── azure_config_loader.py # Azure configuration loader
+└── tests/                     # Test files
+    └── test_workiva_igam_integration.py  # Integration tests
+```
+
+### Configuration Requirements
+
+Create a `config.ini` file with your Workiva API credentials:
+- API endpoints (token_url, users_url)
+- OAuth client credentials (client_id, client_secret)
+- Output settings (directory, filename)
+- Email notification settings (optional)
+
+**Security Note**: Never commit the actual `config.ini` file with real credentials to version control.
+
+For detailed documentation, see [`python/README.md`](python/README.md).
+
+## Support

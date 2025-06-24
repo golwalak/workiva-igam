@@ -1,0 +1,32 @@
+# Workiva IGAM Configuration Template
+# Copy this file to config.ini and update with your actual values
+
+[api]
+# Workiva API endpoints
+token_url = https://api.workiva.com/oauth2/token
+users_url = https://api.workiva.com/v1/users
+
+[auth]
+# OAuth 2.0 client credentials
+# Obtain these from your Workiva API application
+client_id = your_client_id_here
+client_secret = your_client_secret_here
+
+[output]
+# Output directory and filename configuration
+output_dir = ./output
+file_name = Workiva_Account_Aggregation.csv
+
+[email]
+# Email notification settings (optional)
+enabled = false
+smtp_server = mail.sce.com
+smtp_port = 25
+sender_email = workiva.igam.noreply@sce.com
+recipients = your_email@sce.com
+subject = Workiva IGAM Report - {date}
+include_report = true
+
+# Optional SMTP authentication (if required)
+# smtp_username = your_username
+# smtp_password = your_password
